@@ -20,7 +20,7 @@ const INITIAL_JSON: IJsonModel = {
 	global: {
 		tabEnableClose: true,
 		tabSetEnableMaximize: true,
-		tabSetEnableDeleteWhenEmpty: false,
+		tabSetEnableDeleteWhenEmpty: true,
 		splitterSize: 5,
 	},
 	borders: [],
@@ -94,24 +94,27 @@ export default function App() {
 	return (
 		<div className="app-shell">
 			<header className="toolbar">
-			<p className="toolbar-title">test layout</p>
+				<p className="toolbar-title">test layout</p>
 
-			<div className="toolbar-sep" />
+				<div className="toolbar-sep" />
 
-			<p className="toolbar-hint">Click to add panel:</p>
+				<p className="toolbar-hint">Click to add panel:</p>
 
-			<div className="toolbar-panels">
-				{panels.map(({ id, label }) => (
-					<button
-						key={id}
-						className="toolbar-panel-btn"
-						title={`Click to add: ${label}`}
-						onClick={() => addPanelByClick(id)}
-					>
-						{label}
-					</button>
-				))}
+				<div className="toolbar-panels">
+					{panels.map(({ id, label }) => (
+						<button
+							key={id}
+							className="toolbar-panel-btn"
+							title={`Click to add: ${label}`}
+							onClick={() => addPanelByClick(id)}
+						>
+							{label}
+						</button>
+					))}
 				</div>
+
+				<p style={{ marginLeft: "auto" }}>Hi sol!</p>
+
 			</header>
 
 			<div className="layout-canvas">

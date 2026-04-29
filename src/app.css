@@ -85,31 +85,3 @@ body {
 	cursor: grabbing;
 	background: #d0e4fb;
 }
-
-.statusbar {
-	padding: 3px 12px;
-	font-size: 11px;
-	color: #999;
-	background: #fafafa;
-	border-top: 1px solid #e8e8e8;
-	flex-shrink: 0;
-}
-
-.panel-content {
-	padding: 24px 28px;
-	height: 100%;
-	overflow: auto;
-}
-
-.panel-heading {
-	font-size: 22px;
-	font-weight: 600;
-	color: #222;
-	margin-bottom: 10px;
-}
-
-.panel-body {
-	font-size: 14px;
-	color: #555;
-	line-height: 1.6;
-}

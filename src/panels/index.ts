@@ -1,2 +1,2 @@
-import './test'
+import './ingredients'
 import './test2'
