@@ -1,0 +1,115 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: system-ui, sans-serif;
+	font-size: 14px;
+	color: #222;
+	background: #fff;
+	overflow: hidden;
+}
+
+.app-shell {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.layout-canvas {
+	flex: 1;
+	position: relative;
+	overflow: hidden;
+}
+
+.toolbar {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 12px;
+	background: #f4f4f4;
+	border-bottom: 1px solid #d0d0d0;
+	flex-shrink: 0;
+	user-select: none;
+	flex-wrap: wrap;
+}
+
+.toolbar-title {
+	font-weight: 600;
+	font-size: 13px;
+	color: #444;
+	white-space: nowrap;
+}
+
+.toolbar-sep {
+	width: 1px;
+	height: 18px;
+	background: #ccc;
+	flex-shrink: 0;
+}
+
+.toolbar-hint {
+	font-size: 11px;
+	color: #888;
+	white-space: nowrap;
+}
+
+.toolbar-panels {
+	display: flex;
+	gap: 4px;
+	flex-wrap: wrap;
+}
+
+.toolbar-panel-btn {
+	padding: 4px 12px;
+	font-size: 12px;
+	font-family: inherit;
+	background: #fff;
+	border: 1px solid #bbb;
+	border-radius: 4px;
+	cursor: grab;
+	color: #333;
+	transition: background 0.1s, border-color 0.1s;
+	white-space: nowrap;
+}
+
+.toolbar-panel-btn:hover {
+	background: #e8f0fe;
+	border-color: #6699cc;
+	color: #1a4a8a;
+}
+
+.toolbar-panel-btn:active {
+	cursor: grabbing;
+	background: #d0e4fb;
+}
+
+.statusbar {
+	padding: 3px 12px;
+	font-size: 11px;
+	color: #999;
+	background: #fafafa;
+	border-top: 1px solid #e8e8e8;
+	flex-shrink: 0;
+}
+
+.panel-content {
+	padding: 24px 28px;
+	height: 100%;
+	overflow: auto;
+}
+
+.panel-heading {
+	font-size: 22px;
+	font-weight: 600;
+	color: #222;
+	margin-bottom: 10px;
+}
+
+.panel-body {
+	font-size: 14px;
+	color: #555;
+	line-height: 1.6;
+}
